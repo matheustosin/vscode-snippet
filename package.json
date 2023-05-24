@@ -1,0 +1,24 @@
+{
+  "name": "c-sharp-and-java-snippet",
+  "displayName": "C-Sharp and Java Snippet",
+  "description": "Code generator to CSharp and Java",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "java",
+        "path": "./snippets/java.json"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/csharp.json"
+      }
+    ]
+  }
+}

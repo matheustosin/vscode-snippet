@@ -1,0 +1,73 @@
+{
+	// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"class": {
+		"prefix": "class",
+		"description": "Create a class with basic informations",
+		"body": [
+			"public class $TM_FILENAME_BASE {",
+			"\tprivate ${1:Tipo} ${2:atributo};",
+			"\tprivate ${3:Tipo} ${4:atributo};",
+			"",
+			"\tpublic $TM_FILENAME_BASE() {",
+			"\t}",
+			"",
+			"\tpublic $TM_FILENAME_BASE($1 $2, $3 $4) {",
+			"\t\tthis.$2 = $2;",
+        	"\t\tthis.$4 = $4;",
+			"\t}",
+			"",
+			"\tpublic $1 get${2/(^.)/${1:/upcase}/}() {",
+			"\t\treturn $2;",
+			"\t}",
+			"",
+			"\tpublic void set${2/(^.)/${1:/upcase}/}($1 $2) {",
+			"\t\tthis.$2 = $2;",
+			"\t}",
+			"",
+			"\tpublic $3 get${4/(^.)/${1:/upcase}/}() {",
+			"\t\treturn $4;",
+			"\t}",
+			"",
+			"\tpublic void set${4/(^.)/${1:/upcase}/}($3 $4) {",
+			"\t\tthis.$4 = $4;",
+			"\t}",
+			"}"
+		]
+	},
+	"const": {
+		"prefix": "const",
+		"description": "Create a constant",
+		"body": "private final ${1:Tipo} ${2:atributo} = $0;"
+	},
+	"enum": {
+		"prefix": "enum",
+		"description": "Create a enum",
+		"body": [
+			"public enum $TM_FILENAME_BASE {",
+			"\t${1:ENUM},",
+			"\t${2:ENUM};",
+			"}"
+		]
+	},
+	"main": {
+		"prefix": "main",
+		"description": "Create a enum",
+		"body": [
+			"\tpublic static void main(String[] args) {",
+			"\t\t$0",
+			"\t}"
+		]
+	}
+}
